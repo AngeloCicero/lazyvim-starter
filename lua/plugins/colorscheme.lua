@@ -1,10 +1,15 @@
 return {
   {
-    "folke/tokyonight.nvim",
+    "Mofiqul/vscode.nvim",
     opts = {
-      style = "day",
-      colorscheme = "tokyonight-day",
       transparent = true,
+      style = "light",
+    },
+  },
+  {
+    "LazyVim/LazyVim",
+    opts = {
+      colorscheme = "vscode",
     },
   },
 }
