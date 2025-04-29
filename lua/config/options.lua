@@ -5,3 +5,6 @@
 vim.g.root_spec = { "cwd" }
 vim.o.shell = "/usr/bin/fish"
 vim.opt.clipboard = "unnamedplus"
+
+-- Disable animations
+vim.g.snacks_animate = true
