@@ -11,4 +11,4 @@ vim.keymap.set("n", "<C-d>", "<C-d>zz")
 vim.keymap.set("n", "<C-u>", "<C-u>zz")
 
 -- Disable animations
-vim.g.snacks_animate = true
+vim.g.snacks_animate = false
