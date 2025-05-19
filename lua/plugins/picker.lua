@@ -7,9 +7,6 @@ return {
           files = {
             hidden = true,
           },
-          explorer = {
-            hidden = true,
-          },
         },
       },
     },
