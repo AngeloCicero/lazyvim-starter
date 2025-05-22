@@ -1,5 +1,44 @@
 return {
   {
+    {
+      "rcarriga/nvim-dap-ui",
+      dependencies = { "mfussenegger/nvim-dap" },
+      config = function()
+        local dap, dapui = require("dap"), require("dapui")
+
+        dapui.setup({
+          layouts = {
+            {
+              elements = {
+                { id = "scopes", size = 0.3 },
+                { id = "breakpoints", size = 0.3 },
+                { id = "stacks", size = 0.2 },
+                { id = "watches", size = 0.2 },
+              },
+              size = 60,
+              position = "left",
+            },
+            {
+              elements = {
+                { id = "repl", size = 1.0 },
+              },
+              size = 10,
+              position = "bottom",
+            },
+          },
+        })
+
+        dap.listeners.after.event_initialized["dapui_config"] = function()
+          dapui.open()
+        end
+        dap.listeners.before.event_terminated["dapui_config"] = function()
+          dapui.close()
+        end
+        dap.listeners.before.event_exited["dapui_config"] = function()
+          dapui.close()
+        end
+      end,
+    },
     "mfussenegger/nvim-dap",
     optional = true,
     dependencies = {
