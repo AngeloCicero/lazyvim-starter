@@ -2,13 +2,14 @@ return {
   {
     "folke/snacks.nvim",
     opts = {
-      picker = {
-        enabled = true,
-        -- completely ignore these folders
-        exclude = { "venv", "node_modules", "vendor" },
+      -- make sure explorer itself is enabled
+      explorer = { enabled = true },
 
+      -- configure the picker’s explorer source
+      picker = {
         sources = {
-          files = {
+          explorer = {
+            -- show hidden (dot) files in the explorer
             hidden = true,
           },
         },
