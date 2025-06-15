@@ -2,6 +2,9 @@
 return {
   "neovim/nvim-lspconfig",
   opts = {
+    inlay_hints = {
+      enabled = false,
+    },
     servers = {
       pyright = {
         -- point to your project venv
